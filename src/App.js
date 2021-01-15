@@ -1,23 +1,32 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
+const Home = () => {
+  console.log("Home Route here");
+  return (
+    <div className="container-inner">
+      <h2>Home</h2>
+    </div>
+  );
+};
 
-const Category = () => (
-  <div>
-    <h2>Category</h2>
-  </div>
-);
+const Category = () => {
+  console.log("Category Route here");
+  return (
+    <div className="container-inner">
+      <h2>Category</h2>
+    </div>
+  );
+};
 
-const Products = () => (
-  <div>
-    <h2>Products</h2>
-  </div>
-);
+const Products = () => {
+  console.log("Products Route here");
+  return (
+    <div className="container-inner">
+      <h2>Products</h2>
+    </div>
+  );
+};
 
 export default function App() {
   return (
@@ -35,6 +44,17 @@ export default function App() {
           </li>
         </ul>
       </nav>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+
+      <Route path="/category" exact>
+        <Category />
+      </Route>
+
+      <Route path="/products" exact>
+        <Products />
+      </Route>
     </div>
   );
 }

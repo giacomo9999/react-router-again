@@ -3,7 +3,7 @@ import { Link, Route, useRouteMatch } from "react-router-dom";
 import Fruit from "./Fruit";
 import fruitsData from "./FruitsData";
 
-const Fruits = () => {
+const Fruits = ({ match }) => {
   const { url } = useRouteMatch();
   console.log("Fruits useRouteMatch:", useRouteMatch());
 

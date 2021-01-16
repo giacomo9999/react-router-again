@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
-import MoviesList from "./MoviesList";
+import FruitsList from "./FruitsList";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
             <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/moviesList">LIST OF MOVIES</Link>
+            <Link to="/fruits-list">FRUITS LIST</Link>
           </li>
         </ul>
       </nav>
@@ -27,8 +27,8 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/moviesList">
-          <MoviesList />
+        <Route path="/fruits-list">
+          <FruitsList />
         </Route>
       </Switch>
     </div>

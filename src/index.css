@@ -230,5 +230,5 @@ nav a:active {
 }
 
 nav .selectedLink {
-  color: blue;
+  background-color: blue;
 }

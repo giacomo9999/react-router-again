@@ -201,6 +201,10 @@ button {
 
 /* Navbar */
 
+nav {
+  background-color: yellowgreen;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -222,9 +226,9 @@ nav a {
 
 nav a:hover,
 nav a:active {
-  color: orange;
+  color: white;
 }
 
 nav .selectedLink {
-  color: yellowgreen;
+  color: blue;
 }

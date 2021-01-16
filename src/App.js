@@ -2,28 +2,25 @@ import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 
 const Home = () => {
-  console.log("Home Route here");
   return (
-    <div className="container-inner">
-      <h2>Home</h2>
+    <div>
+      <h2>HOME</h2>
     </div>
   );
 };
 
 const Category = () => {
-  console.log("Category Route here");
   return (
-    <div className="container-inner">
-      <h2>Category</h2>
+    <div>
+      <h2>CATEGORY</h2>
     </div>
   );
 };
 
-const Products = () => {
-  console.log("Products Route here");
+const Product = () => {
   return (
-    <div className="container-inner">
-      <h2>Products</h2>
+    <div>
+      <h2>PRODUCT</h2>
     </div>
   );
 };
@@ -34,27 +31,27 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/category">Category</Link>
+            <Link to="/category">CATEGORY</Link>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/product">PRODUCT</Link>
           </li>
         </ul>
       </nav>
-      <Route path="/" exact>
-        <Home />
-      </Route>
-
-      <Route path="/category" exact>
-        <Category />
-      </Route>
-
-      <Route path="/products" exact>
-        <Products />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/category">
+          <Category />
+        </Route>
+        <Route path="/product">
+          <Product />
+        </Route>
+      </Switch>
     </div>
   );
 }

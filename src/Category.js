@@ -4,7 +4,7 @@ import { Link, Route, useParams, useRouteMatch } from "react-router-dom";
 const Item = () => {
   const { itemName } = useParams();
   //   console.log("Item name: ", name);
-  console.log("Item route match: ", useRouteMatch());
+  console.log("Item route match: ", useRouteMatch().params);
   console.log("Item params: ", useParams());
   return (
     <div>

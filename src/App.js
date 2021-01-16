@@ -1,7 +1,9 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
+import Category from "./Category";
 
 const Home = () => {
+  console.log("Home Route Match: ", useRouteMatch());
   return (
     <div>
       <h2>HOME</h2>
@@ -9,15 +11,8 @@ const Home = () => {
   );
 };
 
-const Category = () => {
-  return (
-    <div>
-      <h2>CATEGORY</h2>
-    </div>
-  );
-};
-
 const Product = () => {
+  console.log("Product Route Match: ", useRouteMatch());
   return (
     <div>
       <h2>PRODUCT</h2>
@@ -49,6 +44,9 @@ export default function App() {
           <Category />
         </Route>
         <Route path="/product">
+          <Product />
+        </Route>
+        <Route path="/:id">
           <Product />
         </Route>
       </Switch>

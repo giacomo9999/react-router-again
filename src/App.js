@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
-import FruitsList from "./FruitsList";
+import MoviesList from "./MoviesList";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
   );
 };
 
-export default function App() {
+const App = () => {
   return (
     <div>
       <nav>
@@ -19,7 +19,7 @@ export default function App() {
             <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/fruitsList">FRUITS LIST</Link>
+            <Link to="/moviesList">LIST OF MOVIES</Link>
           </li>
         </ul>
       </nav>
@@ -27,10 +27,12 @@ export default function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/fruitsList">
-          <FruitsList />
+        <Route path="/moviesList">
+          <MoviesList />
         </Route>
       </Switch>
     </div>
   );
-}
+};
+
+export default App;

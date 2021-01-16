@@ -3,7 +3,7 @@ import { useParams, useRouteMatch, Link, Route } from "react-router-dom";
 
 const Fruit = () => {
   const { fruitName } = useParams();
-  console.log(useParams());
+//   console.log("Fruit useParams: ", useParams());
   return (
     <div>
       <h2>{fruitName}</h2>
@@ -13,6 +13,7 @@ const Fruit = () => {
 
 const FruitsList = () => {
   const { url, path } = useRouteMatch();
+//   console.log("FruitsList Route Match: ", useRouteMatch());
   return (
     <div>
       <ul>
